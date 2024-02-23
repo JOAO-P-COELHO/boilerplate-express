@@ -1,52 +1,19 @@
-let express = require('express');
+let express = require("express");
 let app = express();
 
-console.log("Hello World")
+console.log("Hello World");
 
-app.get("/", function(req, res) {
-    // res.send('Oki, doki, me getting it');
-    absolutePath = __dirname + '/views/index.html'
-    res.sendFile(absolutePath)
+// app.get("/", function(req, res) {
+//     // res.send('Oki, doki, me getting it');
+//     absolutePath = __dirname + '/views/index.html'
+//     res.sendFile(absolutePath)
 
-    app.use("/public", express.static(__dirname + "/public"))
+//     app.use("/public", express.static(__dirname + "/public"))
 
-    res.json("your-app-url/json", {"message": "Hello json"})
-  })
+//     res.json("your-app-url/json", {"message": "Hello json"})
+//   })
 
+app.get("/json", function (req, res){
+  res.json({"message": "Hello json"})});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- module.exports = app;
+module.exports = app;
