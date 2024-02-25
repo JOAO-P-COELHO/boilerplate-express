@@ -8,29 +8,37 @@ console.log("Hello World");
 //     // res.send('Oki, doki, me getting it');
 //     absolutePath = __dirname + '/views/index.html'
 //     res.sendFile(absolutePath)
-
 //     app.use("/public", express.static(__dirname + "/public"))
-
 //     res.json("your-app-url/json", {"message": "Hello json"})
 //   })
 
 
 
-app.get("/json", function (req, res){
-  if(process.env.MESSAGE_STYLE === "uppercase"){
-
+// app.get("/json", function (req, res){
+//   if(process.env.MESSAGE_STYLE === "uppercase"){
+//     res.json({"message": "HELLO JSON"})}
   
-    res.json({"message": "HELLO JSON"})}
-    
-  else {res.json({"message": "Hello json"});}
+//   else {res.json({"message": "Hello json"});}
+
+// })
 
 
+// app.use ("/", function (req, res, next){
+// console.log(`${req.method} ${req.path} - ${req.ip}`);
+// next();
+// })
 
-    
 
-})
-
+// app.get ("/now", function(req, res, next) {
+//   req.time = new Date().toString()
+//   next();
+// }, function(req, res) {
+//   res.json({time: req.time})
   
+// });
+
+
+
 
 
 module.exports = app;
